@@ -8,4 +8,10 @@ spec:
     - name: nginx
       image: nginx:latest
       ports:
-        - containerPort: 80  
+        - containerPort: 80
+  tolerations:
+    - key: "prod"
+      value: "true"
+      operator: "Equal"
+      effect: "NoSchedule"  
+           
